@@ -1,20 +1,11 @@
 """Example script for using the mock search agent."""
 import sys
-import os
-import locale
-
-# Set up UTF-8 encoding before importing any other modules
-os.environ["PYTHONIOENCODING"] = "utf-8"
-os.environ["LANG"] = "C.UTF-8"
-locale.getpreferredencoding = lambda: 'UTF-8'
-
 from langchain.agents.mock_search_agent import MockSearchAgent
 
 def main():
     """Run the QA interface."""
-    # Basic script setup - no explicit encoding handling needed
-    # Python 3 handles UTF-8 by default when PYTHONIOENCODING is set
-    pass
+    # Let Python handle encoding based on environment variables
+    # Run with: PYTHONIOENCODING=utf-8 python3 script.py
     
     agent = MockSearchAgent()
     print("Mock Search QA System (支持中文)")
