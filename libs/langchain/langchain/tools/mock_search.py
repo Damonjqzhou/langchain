@@ -1,6 +1,6 @@
 """Mock search tool for development and testing."""
 from typing import Optional
-from langchain.tools.base import BaseTool
+from langchain_core.tools import BaseTool
 
 class MockSearchTool(BaseTool):
     """Mock search tool that returns predefined results."""

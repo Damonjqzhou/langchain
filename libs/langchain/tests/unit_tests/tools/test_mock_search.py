@@ -1,5 +1,6 @@
 """Tests for mock search tool."""
 from langchain.tools.mock_search import MockSearchTool
+from langchain_core.tools import BaseTool
 
 def test_mock_search():
     """Test that mock search returns expected format."""
