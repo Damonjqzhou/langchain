@@ -4,9 +4,9 @@ from langchain.agents.mock_search_agent import MockSearchAgent
 
 def main():
     """Run the QA interface."""
-    # Set up UTF-8 encoding for input/output
-    sys.stdin.reconfigure(encoding='utf-8')
-    sys.stdout.reconfigure(encoding='utf-8')
+    # Ensure UTF-8 encoding for input/output
+    import os
+    os.environ['PYTHONIOENCODING'] = 'utf-8'
     
     agent = MockSearchAgent()
     print("Mock Search QA System (支持中文)")
