@@ -5,9 +5,8 @@ from langchain.agents.mock_search_agent import MockSearchAgent
 def main():
     """Run the QA interface."""
     # Ensure UTF-8 encoding for input/output
-    import io
-    sys.stdin = io.TextIOWrapper(sys.stdin.buffer, encoding='utf-8')
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+    import os
+    os.environ['LANG'] = 'C.UTF-8'
     
     agent = MockSearchAgent()
     print("Mock Search QA System (支持中文)")
