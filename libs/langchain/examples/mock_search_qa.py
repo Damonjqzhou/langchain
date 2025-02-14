@@ -1,5 +1,13 @@
 """Example script for using the mock search agent."""
 import sys
+import os
+import locale
+
+# Set up UTF-8 encoding before importing any other modules
+os.environ["PYTHONIOENCODING"] = "utf-8"
+os.environ["LANG"] = "C.UTF-8"
+locale.getpreferredencoding = lambda: 'UTF-8'
+
 from langchain.agents.mock_search_agent import MockSearchAgent
 
 def main():
