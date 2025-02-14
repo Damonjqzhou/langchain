@@ -1,4 +1,4 @@
-# 🦜️🔗 LangChain
+# 🦜️🔗 LangChain - A framework for developing applications powered by language models
 
 ⚡ Build context-aware reasoning applications ⚡
 
