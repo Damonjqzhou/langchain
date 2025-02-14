@@ -1,23 +1,28 @@
 """Example script for using the mock search agent."""
+import sys
 from langchain.agents.mock_search_agent import MockSearchAgent
 
 def main():
     """Run the QA interface."""
+    # Set up UTF-8 encoding for input/output
+    sys.stdin.reconfigure(encoding='utf-8')
+    sys.stdout.reconfigure(encoding='utf-8')
+    
     agent = MockSearchAgent()
-    print("Mock Search QA System")
-    print("Type 'exit' to quit\n")
+    print("Mock Search QA System (支持中文)")
+    print("输入 'exit' 退出\n")
     
     while True:
-        question = input("\nEnter your question: ")
+        question = input("\n请输入您的问题: ")
         if question.lower() == 'exit':
             break
             
         try:
             response = agent.run(question)
-            print("\nResponse:")
+            print("\n回答:")
             print(response)
         except Exception as e:
-            print(f"\nError: {str(e)}")
+            print(f"\n错误: {str(e)}")
 
 if __name__ == "__main__":
     main()
